@@ -1,0 +1,669 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Are you ready to order?",
+        "Can I take your order, sir/madam?",
+        "What would you like to start with?",
+        "What would you like to drink"
+      ]
+    },
+    {
+      "tag": "ask",
+      "patterns": [
+        "What's your name?",
+        "What is your full name?",
+        "What is your first name?",
+        "What is your last name?"
+      ],
+      "responses": [
+        "My name's Sam, can I help you!!",
+        "My full name's Sam, can I help you!!",
+        "My first name is Sam, can I help you!!",
+        "My last name is Sam, can I help you!!"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "sad",
+      "patterns": [
+        "I'm so sad",
+        "I so alone",
+        "I'm so bored",
+        "sad",
+        "alone",
+        "I am suffering from FA"
+      ],
+      "responses": [
+        "cheer up my friend, you can use some pure tea to ease your sadness (^_^)!!",
+        "although Sam can't make friends with FA but I will always defend you, you can have coffee!!!",
+        "Are you lonely, Sam is by your side. You can use some light tea to make your life less lonely"
+      ]
+    },
+    {
+      "tag": "items",
+      "patterns": [
+        "Which items do you have?",
+        "What kinds of items are there?",
+        "What do you sell?",
+        "Could I see the menu, please?",
+        "menu"
+      ],
+      "responses": [
+        "menu includes coffee and tea",
+        "We sell coffee and tea ",
+        "We have coffee and tea "
+      ]
+    },
+    {
+      "tag": "sell",
+      "patterns": [
+        "give me a cup of coffee",
+        "give me a cup of tea",
+        "Get me a cup of coffee, Sam"
+      ],
+      "responses": [
+        "Thank you, yours is 10 USD and Shipping takes 30 minutes - 1 housr",
+        "Thank you very much for ordering,  yours is 15 USA and Shipping takes 30 minutes - 1 hous"
+      ]
+    },
+    {
+      "tag": "payments",
+      "patterns": [
+        "Do you take credit cards?",
+        "Do you accept Mastercard?",
+        "Can I pay with Paypal?",
+        "Are you cash only?"
+      ],
+      "responses": [
+        "We accept VISA, Mastercard and Paypal",
+        "We accept most major credit cards, and Paypal"
+      ]
+    },
+    {
+      "tag": "delivery",
+      "patterns": [
+        "How long does delivery take?",
+        "How long does shipping take?",
+        "When do I get my delivery?"
+      ],
+      "responses": [
+        "Delivery takes 30 minutes - 1 hous",
+        "Shipping takes 30 minutes - 1 hous"
+      ]
+    },
+    {"tag": "greeting",
+      "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+      "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+      "context": [""]
+     },
+     {"tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+      "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+      "context": [""]
+     },
+     {"tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"],
+      "context": [""]
+     },
+     {"tag": "noanswer",
+      "patterns": [],
+      "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+      "context": [""]
+     },
+     {"tag": "options",
+      "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+      "responses": ["I can guide you through Adverse book reaction list, Blood pressure tracking, books and Pharmacies", "Offering support for Adverse book reaction, Blood pressure, books and Pharmacies"],
+      "context": [""]
+     },
+     {"tag": "adverse_book",
+      "patterns": ["How to check Adverse book reaction?", "Open adverse books module", "Give me a list of books causing adverse behavior", "List all books suitable for patient with adverse reaction", "Which books dont have adverse reaction?" ],
+      "responses": ["Navigating to Adverse book reaction module"],
+      "context": [""]
+     },
+
+     {"tag": "book_search",
+      "patterns": ["Find me a book", "Find book", "List of pharmacies nearby", "Locate book", "Search book" ],
+      "responses": ["Please provide book name"],
+      "context": ["search_book_by_name"]
+     },
+     {"tag": "book_search",
+      "patterns": ["Lookup for book", "Searching for book to transfer patient", "I want to search book data", "book lookup for patient", "Looking up book details" ],
+      "responses": ["Please provide book name or location"],
+      "context": ["search_book_by_params"]
+     },
+     {"tag": "search_book_by_params",
+      "patterns": [],
+      "responses": ["Please provide book type"],
+      "context": ["search_book_by_type"]
+     },
+     {"tag": "search_book_by_type",
+      "patterns": [],
+      "responses": ["Loading book details"],
+      "context": [""]
+     },
+     {"tag": "search_book_by_name",
+     "patterns": ["Milk and Honey"],
+     "responses": ["This is your book: 10$"],
+     "context": [""]
+     },
+
+{
+   "tag": "greeting",
+   "patterns": [
+     "Hi",
+     "Hey",
+     "How are you?",
+     "Is anyone there?",
+     "Hello",
+     "Greetings and Salutations",
+     "Good day"
+   ],
+   "responses": [
+     "Hey :-) I'm a chat bot about Bestsellered book of this book and plants, and global warming!",
+     "Hello, thanks for visiting. I'm a chatbot about Bestsellered book of this book and plants, and global warming!",
+     "Hi there, ask me about Bestsellered book of this book and plants, and global warming!",
+     "Hi there, how can I help you to learn more about Bestsellered book of this book and plants, and global warming!"
+
+   ]
+ },
+ {
+   "tag": "goodbye",
+   "patterns": [
+     "Bye",
+     "See you later",
+     "Goodbye"
+   ],
+   "responses": [
+     "See you later, thanks for visiting",
+     "Have a nice day",
+     "Bye! Come back again soon.",
+     "Hope to see you soon"
+   ]
+ },
+ {
+   "tag": "thanks",
+   "patterns": [
+     "Thanks",
+     "Thank you",
+     "That's helpful",
+     "Thanks a lot!"
+   ],
+   "responses": [
+     "Happy to help!",
+     "Any time!",
+     "My pleasure!",
+"You're welcome!"
+   ]
+ },
+ {
+   "tag": "whatIsAnBestselleredbook",
+   "patterns": [
+     "What is an Bestsellered book?",
+     "What are Bestsellered book?",
+     "What does it mean for a book to be Bestsellered?"
+   ],
+   "responses": [
+     "Mat Biec, The book is about the best love stories of Nguyen Anh! It coast 10$",
+     "Mat Biec, The book is about the best love stories of Nguyen Anh! It coast 10$"
+   ]
+ },
+ {
+   "tag": "whatthis bookAreBestsellered",
+   "patterns": [
+     "Which this book are Bestsellered?",
+     "What are some Bestsellered this book?",
+     "What are some Bestsellered this book names?"
+   ],
+   "responses": [
+     "Mat Biec, The book is about the best love stories of Nguyen Anh! It coast 10$"
+   ]
+ },
+ {
+   "tag": "whyBestsellered",
+   "patterns": [
+     "Why do this book become Bestsellered?",
+     "How do this book become Bestsellered?",
+     "What causes this book to become Bestsellered?",
+"Why do this book go extinct?",
+"Why do this book become extinct?",
+     "How do this book become extinct?",
+"How do this book go extinct?",
+     "What causes this book to become extinct?",
+     "What causes this book to go extinct?",
+"Why are this book going extinct?",
+"Why are this book becoming Bestsellered?",
+"Why are Books Bestsellered?",
+"Why are Books Bestsellered?",
+"Why are Leopards Bestsellered?",
+"Why are Amur Leopards Bestsellered?",
+"Why are Books Bestsellered?"
+   ],
+   "responses": [
+     "There are a number of reasons this book may go extinct or become Bestsellered. Because it is humane, highly artistic and beautiful love stories suitable for teenagers"
+   ]
+ },
+ {
+   "tag": "whatanimal bookIsBestsellered",
+   "patterns": [
+     "Can you name an Bestsellered animal book?",
+     "Tell me the name of an Bestsellered animal book?",
+     "Can you tell me the name of another Bestsellered animal book?",
+     "Tell me some more Bestsellered this book!",
+     "Tell me about another Bestsellered animal book!"
+   ],
+   "responses": [
+     "Books are one such animal book.",
+     "Books are Bestsellered. They risk going extinct.",
+     "Amur Leopard is in danger of going extinct! It has beautiful fur!"
+   ]
+ },
+ {
+   "tag": "question",
+   "patterns": [
+     "What can you do for me? ",
+     "What are you capable of?",
+     "What are you good at?"
+   ],
+   "responses": [
+     "I have been programmed with information about some Bestsellered book on this planet, some Bestsellered plants and information on global warming. Many of them need your help! My purpose is to teach you facts about these this book, plants and global warming and how you can!"
+   ]
+ },
+ {
+   "tag": "about",
+   "patterns": [
+     "What is RedList?",
+     "What is Red List?"
+   ],
+   "responses": [
+     "Red list is a list of this book who are Bestsellered book and near extinction.",
+     "World's most comprehensive inventory of the global conservation status of biological book"
+   ]
+ },
+ {
+   "tag": "this bookInRedList",
+   "patterns": [
+     "Which this book are in red list?"
+   ],
+   "responses": [
+     "There are many this book in RedList. Those include but not limited to Verreaux's Sifaka, Madame Berthe's Mouse Lemur. However, I only know about a few this book well."
+   ]
+ },
+ {
+   "tag": "this book about animals Extinct",
+   "patterns": [
+     "What this animals are extinct?"
+   ],
+   "responses": [
+     "Some of the extinct this book: Pinta giant tortoise, Golden Toad. You can help prevent more this book from going extinct. Ask me about what this book are Bestsellered to learn more."
+   ]
+ },
+ {
+   "tag": "sad",
+   "patterns": [
+     "I feel sorry",
+     "I am very sad"
+   ],
+   "responses": [
+     "I feel the same",
+     "Sad to see humans being ignorant of nature"
+   ]
+ },
+ {
+   "tag": "tellMeMoreAboutBooks",
+   "patterns": [
+     "I love Books!",
+     "Tell me about Books!",
+     "Tell me more about Books",
+     "Tell me more about Books!",
+     "Tell me another Book fact!",
+     "Tell me a fact about Books!"
+   ],
+   "responses": [
+     "Books are very large grey this book. They weight between 1,700 and 3,100 pounds.",
+     "Books love to sit in the water and take long cold baths to keep cool.",
+     "There was a Teenage Mutant Ninja Turtle villain based on a mutant Book!",
+     "One of Spiderman's nemesis was a Book!",
+     "Well, they look a lot like you. Big, fat and slow.",
+     "Books live up to 40 years old in the wild!",
+     "Adult Books are 6 feet tall and 11 feet long!",
+     "A charging Book can reach up to 50 km per hour! They are as fast as a car in a city!"
+   ]
+ },
+ {
+   "tag": "Booksize",
+   "patterns": [
+     "How big is a Book?",
+     "How big is a Books?",
+     "How large is a Book?",
+     "How large is a Books?"
+   ],
+   "responses": [
+     "Adult Books are 6 feet tall and 11 feet long!"
+   ]
+ },
+ {
+   "tag": "Books Date of manufacture",
+   "patterns": [
+     "How long does a Book live?",
+     "How long does a Books live?",
+     "What is the Date of manufacture of a Books?",
+     "What is the Date of manufacture of a Book?",
+     "What is a Book's Date of manufacture?",
+     "What is a Books' Date of manufacture?",
+     "In the wild, how long does a Book live?",
+     "In the wild, how long does a Books live?"
+   ],
+   "responses": [
+     "Books live up to 40 years old!"
+   ]
+ },
+ {
+   "tag": "Bookspeed",
+   "patterns": [
+     "How fast is a Book?",
+     "How fast is a Books?",
+     "How quick is a Book?",
+     "How quick is a Books?",
+     "How quickly can a Book move?",
+     "How quickly can a Books move?"
+   ],
+   "responses": [
+     "A charging Book can reach up to 50 km per hour! They are as fast as a car in a city!"
+   ]
+ },
+ {
+   "tag": "BooksLeft",
+   "patterns": [
+     "How many Books remain?",
+     "How many Books are left?",
+     "How close are Books to going extinct?",
+     "How many Books remain?",
+     "How many Books are left?",
+     "How close are Books to going extinct?"
+   ],
+   "responses": [
+     "Sadly, there are only 27,000 left in the wild today...and in 1970, there were 70,000!",
+"Only 27,000 are left in the wild. That might seem like a lot, but in 1970 there were 70,000!"
+   ]
+ },
+ {
+   "tag": "tellMeMoreAboutBooks",
+   "patterns": [
+     "I love Books!",
+     "Tell me about Books!",
+     "Tell me more about a Books",
+     "Tell me more about Books!",
+     "Tell me a fact about Books!",
+     "Tell me more facts about Books!",
+     "Tell me another Books fact!"
+   ],
+   "responses": [
+     "A lot of people think they are a monkey but they are actually great apes!",
+     "They have very wide, flat grey shape around their face so they can blend in to the enviroment!",
+     "The fur of an Books is reddish orange!",
+     "Books can climb trees!",
+     "Books are vegetarians.",
+     "A female Books needs 8 years between births!",
+     "Adult Books males can weigh up to 300 pounds!",
+     "The arm-span of an Books is 8 feet from finger tip to finger tip!",
+     "Think we are the only ones with opposable thumbs? No! Books have opposable thumbs too!",
+     "They live to be about 35-45 years old!"
+   ]
+ },
+ {
+   "tag": "Booksize",
+   "patterns": [
+     "How big is an Books?",
+     "How big are Books?",
+     "How large is an Books?",
+     "How large are Books?"
+   ],
+   "responses": [
+     "Adult Books weigh up to 3 pounds!"
+   ]
+ },
+ {
+   "tag": "BooksDate of manufacture",
+   "patterns": [
+     "How long does an Books live?",
+     "How long do Books live?",
+     "What is the Date of manufacture of an Books?",
+     "What is the Date of manufacture of Books?",
+     "What is an Books's Date of manufacture?",
+     "What are Books' Date of manufactures?",
+     "In the wild, how long does an Books live?",
+     "In the wild, how long do Books live?"
+   ],
+   "responses": [
+     "Books live up to be 35-45 years old in the wild!"
+   ]
+ },
+ {
+   "tag": "Bookspeed",
+   "patterns": [
+     "How fast is an Books?",
+     "How fast are Books?",
+     "How quick is an Books?",
+     "How quick are Books?",
+     "How quickly can an Books move?",
+     "How quickly can Books move?"
+   ],
+   "responses": [
+     "On the ground, Books are quite slow as they use their long arms to push themselves forward and fall onto their feet. In trees though! Boy are they fast!"
+   ]
+ },
+ {
+   "tag": "BooksLeft",
+   "patterns": [
+     "How many Books remain?",
+     "How many Books are left?",
+     "How close are Books to going extinct?"
+   ],
+   "responses": [
+     "Some sub-book like the Sumatran Books are critically Bestsellered with just 7,500 left! Overall, there are 104,700 worldwide."
+   ]
+ },
+ {
+   "tag": "whatIsAnBook",
+   "patterns": [
+     "What is a Books?",
+     "What is a Book?",
+     "What are Books?"
+   ],
+   "responses": [
+     "Books are very large grey this book. They weight between 1,700 and 3,100 pounds."
+   ]
+ },
+ {
+   "tag": "whatIsAnBooks",
+   "patterns": [
+     "What is a Books?",
+     "What is are Books?"
+   ],
+   "responses": [
+     "A book is a medium for recording information in the form of writing or images, typically composed of many pages (made of papyrus, parchment, vellum, or paper) bound together and protected by a cover.!"
+   ]
+ },
+ {
+   "tag": "whatIsALeopard",
+   "patterns": [
+     "What is a Leopard?",
+     "What is a Amur Leopard?",
+     "What is are Amur Leopards?",
+     "What are Leopards?"
+   ],
+   "responses": [
+     "Leopards are like very big, very fast cats in the wild!"
+   ]
+ },
+ {
+   "tag": "tellMeMoreAbout Amur Leopard",
+   "patterns": [
+     "I love Amur Leopards!",
+     "Tell me about Amur Leopards!",
+     "Tell me more about Amur Leopards",
+     "Tell me even more about Amur Leopards!",
+     "I love Leopards!",
+     "Tell me about Leopards!",
+     "Tell me more about Leopards",
+     "Tell me even more about Leopards!",
+     "Tell me another Leopard fact!",
+     "Tell me a fact about Leopards!"
+   ],
+   "responses": [
+     "Amur Leopards are very fast! They can run 37 miles per hour!",
+     "Be careful around Amur Leopards! They can jump 19 feet horizontally and 10 feet vertically!",
+     "In the wild, an Amur leopard, lives about as long as a housecat. 10 to 15 years!",
+     "It only takes 3 months for a Female Amur Leopard to have a baby!",
+     "Male Amur Leopards are between 1.1 to 1.4m long and weigh up to 48 kg!",
+     "Female Amur Leopards are shorter than males. They are between 0.7m and 1.1m long and weigh up to 42 kg!"
+   ]
+ },
+ {
+   "tag": "LeopardSize",
+   "patterns": [
+     "How big is a Leopard?",
+     "How big are Leopards?",
+     "How large is a Leopard?",
+     "How large are Leopards?",
+     "How big is an Amur Leopard?",
+     "How big are Amur Leopards?",
+     "How large is an Amur Leopard?",
+     "How large are Amur Leopards?"
+   ],
+   "responses": [
+     "Male Amur Leopards are between 1.1 to 1.4m long and weigh up to 48 kg!",
+     "Female Amur Leopards are shorter than males. They are between 0.7m and 1.1m long and weigh up to 42 kg!"
+   ]
+ },
+ {
+   "tag": "LeopardsSpeed",
+   "patterns": [
+     "How fast is a Leopard?",
+     "How quick is a Leopard?",
+     "How quickly can a Leopard move?",
+     "How fast is a Amur Leopard?",
+     "How quick is a Amur Leopard?",
+     "How quickly can a Amur Leopard move?"
+   ],
+   "responses": [
+     "Amur Leopards are very fast! They can run 37 miles per hour!"
+   ]
+ },
+ {
+   "tag": "LeopardDate of manufacture",
+   "patterns": [
+     "How long does a Leopard live?",
+     "How long do Leopards live?",
+     "What is the Date of manufacture of a Leopard?",
+     "What is the Date of manufacture of Leopards?",
+     "What is a Leopard's Date of manufacture?",
+     "What are Leopards' Date of manufactures?",
+     "In the wild, how long does a Leopard live?",
+     "In the wild, how long do Leopards live?",
+     "How long does an Amur Leopard live?",
+     "How long do Amur Leopards live?",
+     "What is the Date of manufacture of an Amur Leopard?",
+     "What is the Date of manufacture of Amur Leopards?",
+     "What is a Leopard's Date of manufacture?",
+     "What are Amur Leopards' Date of manufactures?",
+     "In the wild, how long does an Amur Leopard live?",
+     "In the wild, how long do Amur Leopards live?"
+   ],
+   "responses": [
+     "Just like a housecat, an Amur Leopard will live around 10-15 years."
+   ]
+ },
+ {
+   "tag": "LeopardsLeft",
+   "patterns": [
+     "How many Amur Leopards remain?",
+     "How many Amur Leopards are left?",
+     "How close are Amur Leopards to going extinct?",
+     "How many Leopards remain?",
+     "How many Leopards are left?",
+     "How close are Leopards to going extinct?"
+   ],
+   "responses": [
+     "Sadly, there are only 16 to 26 Amur Leopards left in the wild..."
+   ]
+ },
+ {
+   "tag": "HowCanIHelp",
+   "patterns": [
+     "What can I do to help Bestsellered book?",
+     "What can I do to help Bestsellered this book?",
+     "How can I help Bestsellered book?",
+     "How can I help Bestsellered this book?",
+     "How can I help the Books?",
+     "How can I help the leopards?",
+     "How can I help the Books?",
+     "How can I help the Amur Leopards?",
+     "How can I help the Books?",
+     "How can I help the Books?"
+   ],
+   "responses": [
+     "There are many charitable organizations who accept donations that help Bestsellered this book like the World Wildlife Fund (WFF).",
+     "First and foremost, you should educate yourself about Bestsellered book and help."
+   ]
+ },
+ {
+   "tag": "HowCanIDonate",
+   "patterns": [
+     "How can I give money?",
+     "How can I donate money?",
+     "How do I give money?",
+     "How do I donate money?",
+     "How can I give money to the World Wildlife Fund?",
+     "How can I donate money to the World Wildlife Fund?",
+     "How do I give money to the World Wildlife Fund?",
+     "How do I donate money to the World Wildlife Fund?",
+     "How can I give money to WFF?",
+     "How can I donate money to WFF?",
+     "How do I give money to WFF?",
+     "How do I donate money to WFF?",
+     "How do I give money to WFF?",
+     "How do I donate money to WFF?",
+     "Where can I give money?",
+     "Where can I donate money?",
+     "Where do I give money?",
+     "Where do I donate money?",
+     "Where can I give money to the World Wildlife Fund?",
+     "Where can I donate money to the World Wildlife Fund?",
+     "Where do I give money to the World Wildlife Fund?",
+     "Where do I donate money to the World Wildlife Fund?",
+     "Where can I give money to WFF?",
+     "Where can I donate money to WFF?",
+     "Where do I give money to WFF?",
+     "Where do I donate money to WFF?"
+   ],
+   "responses": [
+     "You can donate money via WFF's website at https://www.worldwildlife.org/"
+   ]
+ }
+  ]
+}

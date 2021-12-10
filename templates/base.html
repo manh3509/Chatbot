@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sam Coffee</title>
+</head>
+<body>
+    <!-- Navigation -->
+  <nav class="w3-bar w3-black">
+    <a href="#home" class="w3-button w3-bar-item">Home</a>
+    <a href="#band" class="w3-button w3-bar-item">Band</a>
+    <a href="#tour" class="w3-button w3-bar-item">Tour</a>
+    <a href="#contact" class="w3-button w3-bar-item">Contact</a>
+  </nav>
+  
+  <!-- Slide Show -->
+  <section>
+    <img class="mySlides" src="https://chuphinhmenu.com/wp-content/uploads/2020/01/chup-anh-tra-sua-concept-dep-2020_0007.jpg"
+    style="width:100%">
+    <img class="mySlides" src="https://media.foody.vn/res/g1/8331/prof/s/foody-upload-api-foody-mobile-78f5d011-6dbc-437c-9-201230113413.jpg"
+    style="width:100%">
+    <img class="mySlides" src="https://images.foody.vn/res/g107/1065100/prof/s1242x600/foody-upload-api-foody-mobile-27-210127173632.jpg"
+    style="width:100%">
+  </section>
+  
+  <!-- Band Description -->
+  <section class="w3-container w3-center w3-content" style="max-width:600px">
+    <h2 class="w3-wide">THE BAND</h2>
+    <p class="w3-opacity"><i>We love music</i></p>
+    <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </section>
+  
+  <!-- Band Members -->
+  <section class="w3-row-padding w3-center w3-light-grey">
+    <article class="w3-third">
+      <p>Tea</p>
+      <img src="https://chuphinhmenu.com/wp-content/uploads/2020/01/chup-anh-tra-sua-concept-dep-2020_0006.jpg" alt="Random Name" style="width:100%">
+      <p>lychee tea.</p>
+    </article>
+    <article class="w3-third">
+      <p>Milk tea</p>
+      <img src="https://thuthuatnhanh.com/wp-content/uploads/2020/12/hinh-anh-tra-sua-dep-va-ngon.jpg" alt="Random Name" style="width:100%">
+      <p>Black sugar foot chocolate milk tea.</p>
+    </article>
+    <article class="w3-third">
+      <p>Coffee</p>
+      <img src="https://inbimi.com/wp-content/uploads/2021/05/java-coffee-tea.jpg" alt="Random Name" style="width:100%">
+      <p>Milk coffee.</p>
+    </article>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+    <a href="#"><i class="fa fa-facebook-official"></i></a>
+    <a href="#"><i class="fa fa-pinterest-p"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-flickr"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <p class="w3-medium">
+    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+    </p>
+  </footer>
+    <script>
+      // Automatic Slideshow - change image every 3 seconds
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}
+          x[myIndex-1].style.display = "block";
+          setTimeout(carousel, 3000);
+      }
+    </script> 
+  <div class="container" >
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="https://img.icons8.com/color/48/000000/businesswoman.png"/>
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Chat support</h4>
+                    <p class="chatbox__description--header">Hi. My name is Sam. How can I help you?</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">Send</button>
+            </div>
+        </div>
+        <div class="chatbox__button">
+            <button onclick="topFunction()" id="myBtn" title="Hotline"><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+        </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+  <script type=text/javascript>
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      function topFunction() {
+        $SCRIPT_ROOT ={{request.script_root|tojson}};
+      }
+  </script>
+</body>
+</html>
